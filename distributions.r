@@ -200,4 +200,16 @@ norm_plot_w_calc +
   geom_vline(xintercept = left_cutoff, color="black")+
   geom_vline(xintercept = right_cutoff, color="black")
 
-###################################   Binomial/Bernouli Distribution   ##########################################
+###################################   Binomial Distribution   ##########################################
+# occurrences of an event happening n amount of times given a probability of success
+
+binom_data <- rbinom(N, size=10, prob=.5)
+table(binom_data)
+hist(binom_data, breaks=seq(-.5, 10.5, 1))
+
+###################################   Bernouli Trial/Distribution   ##########################################
+# Bernouli trials is a single event that has only 2 outcomes (binary variables)
+# heads or tails, <= 100 or > 100
+
+bernouli_sequence <- rbinom(N, size=1, prob=.95)
+mean(bernouli_sequence)
